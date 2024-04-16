@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 16:52:54 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/16 17:45:33 by eduildo          ###   ########.fr       */
+/*   Created: 2024/04/16 17:40:39 by eduildo           #+#    #+#             */
+/*   Updated: 2024/04/16 17:48:41 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_isdigit(int c)
+int ft_isalnum(int c)
 {
 
-    if (c >= '0' && c <= '9')
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z ') || (c >= '0' && c <= '9'))
         return (c);
-
     return (0);
 }
 
 int main()
 {
 
-    char digit[10] = "Hello2";
+    char text[] = "hello;";
+    int i;
 
-    for (int i = 0; digit[i] != '\0'; i++)
+    for (i = 0; text[i] != '\0'; i++)
     {
-        if (ft_isdigit(digit[i]) == 0)
-        {
-            printf("The return value is not a digit: %d\n", ft_isdigit(digit[i]));
-        }
-        else
-        {
-            printf("The return value is %d\n", ft_isdigit(digit[i]));
-        }
+        printf("The return value is : %d\n", ft_isalnum(text[i]));
     }
+    return (0);
 }
