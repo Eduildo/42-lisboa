@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 17:40:39 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/18 16:20:17 by eduildo          ###   ########.fr       */
+/*   Created: 2024/04/23 15:32:05 by eduildo           #+#    #+#             */
+/*   Updated: 2024/04/23 15:42:10 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-int ft_isalnum(int c)
+void ft_bzero(void *s, size_t n)
 {
+    // temporarily pointer
+    char *tmp_ptr;
 
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z ') || (c >= '0' && c <= '9'))
-        return (c);
-    return (0);
+    // temporary pointer equal to s, to be converter into char
+    tmp_ptr = (char *)s;
+
+    //
+    while (n > 0)
+    {
+        *(tmp_ptr++) = 0;
+        n--;
+    }
 }
 
 int main()
 {
-
-    char text[] = "hello;";
-    int i;
-
-    for (i = 0; text[i] != '\0'; i++)
-    {
-        printf("The return value is : %d\n", ft_isalnum(text[i]));
-    }
-    return (0);
+    char str[50] = "Teste de memset";
+    printf("Antes: %s\n", str);
+    ft_bzero(str, 1);
+    printf("Depois: %s\n", str);
 }
