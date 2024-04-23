@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:20:29 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/16 20:01:40 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/23 19:07:01 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ size_t ft_strlen(const char *str)
     return i;
 }
 
-int main()
+/*int main()
 {
     char text[] = "Hello, world";
     size_t length = ft_strlen(text);
     printf("Length of string: %zu\n", length);
     return 0;
-}
+}*/

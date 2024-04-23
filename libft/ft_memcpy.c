@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:06:21 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/23 17:01:23 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/23 19:21:07 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     return (dest);
 }
 
-int main()
+/*int main()
 {
 
     char src[] = "Hello, world!";
@@ -41,4 +41,4 @@ int main()
     printf("Dados copiados: %s\n", dest);
 
     return 0;
-}
+}*/
