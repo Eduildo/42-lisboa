@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:09:34 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/23 20:21:26 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/25 17:57:26 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main()
 
     const char *src = "Hello, world!";
 
-    char dest[50];
+    char dest[1];
 
     size_t copied_len = ft_strlcat(dest, src, sizeof(dest));
 
