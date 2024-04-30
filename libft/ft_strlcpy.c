@@ -6,14 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:55:07 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/23 19:32:13 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:40:24 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <libc.h>
-#include "ft_strlen.c"
-#include "ft_memcpy.c"
+#include "libft.h"
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dst_len)
 {
@@ -33,7 +30,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dst_len)
     return (src_len);
 }
 
-int main()
+/*int main()
 {
 
     const char *src = "Hello, world!";
@@ -46,4 +43,4 @@ int main()
     printf("Comprimento da string copiada: %zu\n", copied_len);
 
     return (0);
-}
+}*/

@@ -6,13 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 02:52:55 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/29 03:11:23 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:25:43 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 void *ft_calloc(size_t count, size_t size)
 {
@@ -30,7 +28,7 @@ void *ft_calloc(size_t count, size_t size)
     return (temp);
 }
 
-int main()
+/*int main()
 {
     int *ptr;
     int i;
@@ -57,4 +55,4 @@ int main()
     free(ptr);
 
     return 0;
-}
+}*/

@@ -6,13 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:54:14 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/28 19:55:45 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:43:32 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <libc.h>
-#include "ft_strlen.c"
+#include "libft.h"
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
     size_t i;
@@ -39,7 +37,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     return (0);
 }
 
-int main()
+/*int main()
 {
     const char *haystack = "hello world";
     const char *needle = "hello";
@@ -51,4 +49,4 @@ int main()
         printf("Substring não encontrada.\n");
 
     return 0;
-}
+}*/

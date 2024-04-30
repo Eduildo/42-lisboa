@@ -6,11 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:33:44 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/16 16:19:47 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:27:54 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int is_alpha(int c)
 {
@@ -19,7 +19,7 @@ int is_alpha(int c)
     return 0;
 }
 
-int main()
+/*int main()
 {
     char text[10] = "H";
     int i;
@@ -37,4 +37,4 @@ int main()
     }
 
     return 0;
-}
+}*/

@@ -6,11 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 19:40:07 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/26 19:43:01 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:44:45 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_tolower(int c)
 {
@@ -19,7 +19,7 @@ int ft_tolower(int c)
     return (c);
 }
 
-int main()
+/*int main()
 {
     char uppercase = 'A';
     char lowercase = ft_tolower(uppercase);
@@ -27,4 +27,4 @@ int main()
     printf("Letter in uppercase: %c\n", uppercase);
     printf("Letter in lowercase: %c\n", lowercase);
     return (0);
-}
+}*/

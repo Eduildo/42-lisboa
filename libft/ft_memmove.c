@@ -6,12 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 17:02:24 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/23 18:11:12 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:36:51 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <libc.h>
+#include "libft.h"
 
 void *ft_memmove(void *dest, const void *src, size_t len)
 {
@@ -41,7 +40,7 @@ void *ft_memmove(void *dest, const void *src, size_t len)
     return (dest);
 }
 
-int main()
+/*int main()
 {
 
     char str_src[] = "Hello, world!";
@@ -53,4 +52,4 @@ int main()
     printf("String copiado: %s\n", str_dst);
 
     return (0);
-}
+}*/

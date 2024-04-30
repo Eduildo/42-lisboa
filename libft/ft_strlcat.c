@@ -6,14 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:09:34 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/25 17:57:26 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:38:45 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <libc.h>
-#include "ft_strlen.c"
-#include "ft_memcpy.c"
+#include "libft.h"
 
 size_t ft_strlcat(char *dst, const char *src, size_t dst_size)
 {
@@ -36,7 +33,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t dst_size)
     return (dst_len + src_len);
 }
 
-int main()
+/*int main()
 {
 
     const char *src = "Hello, world!";
@@ -49,4 +46,4 @@ int main()
     printf("Comprimento da string concatenada: %zu\n", copied_len);
 
     return (0);
-}
+}*/

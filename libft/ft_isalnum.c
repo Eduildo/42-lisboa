@@ -6,11 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 17:40:39 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/18 16:20:17 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:26:15 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_isalnum(int c)
 {
@@ -20,7 +20,7 @@ int ft_isalnum(int c)
     return (0);
 }
 
-int main()
+/*int main()
 {
 
     char text[] = "hello;";
@@ -31,4 +31,4 @@ int main()
         printf("The return value is : %d\n", ft_isalnum(text[i]));
     }
     return (0);
-}
+}*/

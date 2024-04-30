@@ -6,12 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:10:14 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/28 18:29:15 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:33:40 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_strlen.c"
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -36,7 +35,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     return (0);
 }
 
-int main()
+/*int main()
 {
     char str1[] = "hello";
     char str2[] = "Hello";
@@ -58,4 +57,4 @@ int main()
     }
 
     return 0;
-}
+}*/

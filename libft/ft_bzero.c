@@ -6,11 +6,10 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:32:05 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/23 18:16:51 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:23:14 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 void ft_bzero(void *s, size_t n)
 {
     // temporarily pointer
@@ -27,10 +26,10 @@ void ft_bzero(void *s, size_t n)
     }
 }
 
-int main()
+/*int main()
 {
     char str[50] = "Teste de memset";
     printf("Antes: %s\n", str);
     ft_bzero(str, 1);
     printf("Depois: %s\n", str);
-}
+}*/

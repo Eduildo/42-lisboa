@@ -6,13 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:16:00 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/30 16:27:06 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:29:43 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "ft_strlen.c"
+#include "libft.h"
 
 char *ft_strdup(const char *s1)
 {
@@ -32,7 +30,7 @@ char *ft_strdup(const char *s1)
     return (dest);
 }
 
-int main()
+/*int main()
 {
     const char *original = "Hello, world!";
     char *copia;
@@ -49,4 +47,4 @@ int main()
     free(copia);
 
     return 0;
-}
+}*/

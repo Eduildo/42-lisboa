@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 18:05:35 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/25 18:13:34 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:45:07 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int ft_toupper(int c)
     return (c);
 }
 
-int main()
+/*int main()
 {
     char lowercase = 'a';
     char uppercase = ft_toupper(lowercase);
@@ -27,4 +27,4 @@ int main()
     printf("Letter in lowercase: %c\n", lowercase);
     printf("Letter in uppercase: %c\n", uppercase);
     return (0);
-}
+}*/

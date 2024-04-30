@@ -6,11 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:58:30 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/23 15:28:57 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:37:10 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_memset(void *b, int c, size_t len)
 {
@@ -24,10 +24,10 @@ void *ft_memset(void *b, int c, size_t len)
     return (b);
 }
 
-int main()
+/*int main()
 {
     char str[50] = "Teste de memset";
     printf("Antes: %s\n", str);
     ft_memset(str, 'A', 5);
     printf("Depois: %s\n", str);
-}
+}*/

@@ -6,11 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 02:29:54 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/27 02:36:16 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:37:39 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libc.h"
 
 char *ft_strchr(const char *s, int c)
 {

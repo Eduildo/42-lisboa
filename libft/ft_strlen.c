@@ -6,12 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:20:29 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/23 19:07:01 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:40:51 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
+#include "libft.h"
 
 size_t ft_strlen(const char *str)
 {

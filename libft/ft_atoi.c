@@ -6,12 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 20:02:24 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/28 23:34:48 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:46:09 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <libc.h>
+#include "libft.h"
 
 int ft_atoi(const char *str)
 {
@@ -45,7 +44,7 @@ int ft_atoi(const char *str)
     return (result * sign);
 }
 
-int main()
+/*int main()
 {
     char str[] = "12345";
     int num = ft_atoi(str);
@@ -53,4 +52,4 @@ int main()
     printf("O número convertido é: %d\n", num);
 
     return 0;
-}
+}*/

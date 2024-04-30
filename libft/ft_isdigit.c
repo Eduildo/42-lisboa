@@ -6,11 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:52:54 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/16 17:45:33 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/04/30 18:30:52 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_isdigit(int c)
 {
@@ -21,7 +21,7 @@ int ft_isdigit(int c)
     return (0);
 }
 
-int main()
+/*int main()
 {
 
     char digit[10] = "Hello2";
@@ -37,4 +37,4 @@ int main()
             printf("The return value is %d\n", ft_isdigit(digit[i]));
         }
     }
-}
+}*/
