@@ -6,14 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 20:35:38 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/08 15:56:16 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/08 16:44:16 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <stdlib.h>
-#include "ft_strchr.c"
-#include "ft_strlen.c"
+#include "libft.h"
 
 char *ft_strtrim(char const *s1, char const *set)
 {
@@ -43,7 +40,7 @@ char *ft_strtrim(char const *s1, char const *set)
     return (result);
 }
 
-int main()
+/*int main()
 {
     const char *s1 = "loHello, World!lo";
     const char *set = "lo";
@@ -62,4 +59,4 @@ int main()
     }
 
     return 0;
-}
+}*/
