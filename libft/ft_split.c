@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 16:50:59 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/10 18:42:38 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/10 20:15:02 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,22 +67,22 @@ static char *str_fill(const char *str, int start, int end)
 }
 static void split_string(char const *s, char c, char **res)
 {
-    size_t i = 0;
-    int j = 0;
-    int s_word = -1;
+    size_t i;
+    int j;
+    int s_word;
 
+    i = 0;
+    j = 0;
+    s_word = -1;
     while (s[i])
     {
         if (s[i] != c && s_word < 0)
             s_word = i;
         else if ((s[i] == c || !s[i + 1]) && s_word >= 0)
         {
-            res[j] = str_fill(s, s_word, i + (s[i] == c ? 0 : 1));
+            res[j] = str_fill(s, s_word, i);
             if (!res[j])
-            {
-                free_array(res, j);
-                return;
-            }
+                return (free_array(res, j));
             s_word = -1;
             j++;
         }
@@ -93,13 +93,7 @@ static void split_string(char const *s, char c, char **res)
 char **ft_split(char const *s, char c)
 {
     char **res;
-    size_t i;
-    int j;
-    int s_word;
 
-    i = 0;
-    j = 0;
-    s_word = -1;
     res = ft_calloc((char_counter(s, c) + 1), sizeof(char *));
     if (!res)
         return NULL;
