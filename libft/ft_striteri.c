@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/27 16:16:22 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/13 17:23:52 by eduildo          ###   ########.fr       */
+/*   Created: 2024/05/11 18:55:35 by eduildo           #+#    #+#             */
+/*   Updated: 2024/05/13 17:27:03 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t len)
+/*void modify_function(unsigned int index, char *c)
 {
-    unsigned char *str;
-    size_t i;
-    unsigned char uc;
+    *c = *c + 1;
+}*/
+void ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+    unsigned int i;
 
-    str = (unsigned char *)s;
-    uc = (unsigned char)c;
     i = 0;
-    while (i < len)
+    while (s[i])
     {
-        if (str[i] == uc)
-            return ((void *)&str[i]);
+        (*f)(i, &s[i]);
         i++;
     }
-    return (NULL);
 }
+/*int main()
+{
+    char s[] = "Hello, World!";
+    ft_striteri(s, &modify_function);
+    printf("String modificada: %s\n", s);
+
+    return (0);
+}*/

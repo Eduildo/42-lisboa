@@ -6,11 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 18:05:35 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/30 18:45:07 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/13 16:33:40 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_toupper(int c)
 {

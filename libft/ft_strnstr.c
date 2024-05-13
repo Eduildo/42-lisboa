@@ -6,11 +6,14 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:54:14 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/07 04:40:50 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/13 19:28:27 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
+#include <stdio.h>
+#include "ft_strlen.c"
+
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
     size_t i;
@@ -19,6 +22,8 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     i = 0;
     j = 0;
 
+    if (!haystack || !needle || len == 0)
+        return (NULL);
     if (needle[0] == 0)
         return ((char *)haystack);
 
@@ -37,10 +42,10 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     return (0);
 }
 
-/*int main()
+int main()
 {
-    const char *haystack = "hello world";
-    const char *needle = "hello";
+    const char *haystack = NULL;
+    const char *needle = ;
     char *result = ft_strnstr(haystack, needle, ft_strlen(haystack)); // O terceiro argumento é o tamanho de haystack
 
     if (result != NULL)
@@ -49,4 +54,4 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
         printf("Substring não encontrada.\n");
 
     return 0;
-}*/
+}

@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 18:12:45 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/30 18:27:00 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/13 17:16:17 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int ft_isascii(int c)
     return (0);
 }
 
-int main()
+/*int main()
 {
 
     char text[] = "helló";
@@ -27,4 +27,4 @@ int main()
     for (int i = 0; text[i] != '\0'; i++)
         printf("\n%d", ft_isascii(text[i]));
     return 0;
-}
+}*/

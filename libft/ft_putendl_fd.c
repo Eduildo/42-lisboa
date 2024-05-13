@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/27 16:16:22 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/13 17:23:52 by eduildo          ###   ########.fr       */
+/*   Created: 2024/05/11 20:03:13 by eduildo           #+#    #+#             */
+/*   Updated: 2024/05/13 17:27:29 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t len)
+void ft_putendl_fd(char *str, int fd)
 {
-    unsigned char *str;
-    size_t i;
-    unsigned char uc;
+    int i;
 
-    str = (unsigned char *)s;
-    uc = (unsigned char)c;
     i = 0;
-    while (i < len)
+    while (str[i])
     {
-        if (str[i] == uc)
-            return ((void *)&str[i]);
+        write(fd, &str[i], 1);
         i++;
     }
-    return (NULL);
+    write(fd, "\n", 1);
 }
+
+/*int main()
+{
+    char *c = "Ola mundo";
+
+    ft_putendl_fd(c, STDOUT_FILENO);
+
+    return 0;
+}*/

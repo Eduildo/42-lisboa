@@ -6,14 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 16:50:59 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/10 20:15:02 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/13 16:31:14 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
-#include "ft_calloc.c"
-#include "ft_strlen.c"
+#include "libft.h"
 
 static int char_counter(const char *str, char c)
 {
@@ -101,7 +98,7 @@ char **ft_split(char const *s, char c)
     return (res);
 }
 
-int main(void)
+/*int main(void)
 {
     char const *s = "Olá,,,,,,,,,como,,,,Vai?";
     char c = ',';
@@ -127,4 +124,4 @@ int main(void)
     free(split);
 
     return (0);
-}
+}*/

@@ -6,9 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:32:05 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/30 18:23:14 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/13 17:20:11 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {

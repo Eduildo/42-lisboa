@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:16:00 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/30 18:29:43 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/13 17:24:41 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char *ft_strdup(const char *s1)
     size_t i;
 
     dest = (char *)malloc(ft_strlen(s1) + 1);
-
+    i = 0;
     if (!dest)
         return (NULL);
     while (s1[i])

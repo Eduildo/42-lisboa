@@ -6,13 +6,11 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 20:52:15 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/11 18:17:51 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/13 16:33:50 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
+#include "libft.h"
 
 static int int_len(int nbr)
 {
@@ -52,7 +50,7 @@ char *ft_itoa(int n)
     }
     return (result);
 }
-int main()
+/*int main()
 {
     int num = -2147483648;
     int i;
@@ -66,4 +64,4 @@ int main()
     free(result);
 
     return 0;
-}
+}*/

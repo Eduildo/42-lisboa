@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:15:01 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/30 19:48:44 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/13 16:33:50 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     return (str);
 }
 
-int main()
+/*int main()
 {
     const char *original = "Hello, world!";
     char *substring;
@@ -60,4 +60,4 @@ int main()
     free(substring);
 
     return 0;
-}
+}*/
