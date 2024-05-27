@@ -6,12 +6,12 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:39:46 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/13 19:53:35 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/15 22:22:39 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_putchar_fd.c"
+
 void ft_putnbr_fd(int n, int fd)
 {
     if (n == -2147483648)
@@ -32,7 +32,7 @@ void ft_putnbr_fd(int n, int fd)
     else
         ft_putchar_fd(n + 48, fd);
 }
-int main()
+/*int main()
 {
     int num = 15474957;
     int fd = STDOUT_FILENO;
@@ -41,4 +41,4 @@ int main()
     ft_putchar_fd('\n', fd);
 
     return 0;
-}
+}*/

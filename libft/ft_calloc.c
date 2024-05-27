@@ -6,25 +6,25 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 02:52:55 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/30 18:25:43 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/25 23:45:10 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdint.h>
 
 void *ft_calloc(size_t count, size_t size)
 {
-    unsigned char *temp;
-    size_t i;
+    void *temp;
 
-    i = 0;
+    if (count == 0 || size == 0)
+        return (malloc(0));
+    if (SIZE_MAX / count < size)
+        return NULL;
     temp = malloc(count * size);
-
-    if (!temp)
+    if (temp == NULL)
         return (NULL);
-
-    while (i < count * size)
-        temp[i++] = 0;
+    ft_bzero(temp, count);
     return (temp);
 }
 
@@ -43,14 +43,10 @@ void *ft_calloc(size_t count, size_t size)
         printf("Falha ao alocar memória.\n");
         return 1;
     }
-
-    // Imprime os valores (todos devem ser zero)
-    while (i < 10)
+    else
     {
-        write(1, &ptr[i], sizeof(int));
-        i++;
+        printf("Memoria alocada com sucesso.\n");
     }
-    write(1, "\n", 1);
     // Libera a memória alocada
     free(ptr);
 

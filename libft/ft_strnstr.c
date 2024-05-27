@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:54:14 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/13 19:28:27 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/14 14:27:45 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 
     i = 0;
     j = 0;
-
-    if (!haystack || !needle || len == 0)
+    if (!haystack || !needle)
         return (NULL);
-    if (needle[0] == 0)
+    if (ft_strlen(needle) == 0)
         return ((char *)haystack);
-
+    if (len == 0)
+        return (NULL);
     while (haystack[i] && i < len)
     {
         while (haystack[i + j] == needle[j] && (i + j) < len)
@@ -38,14 +38,13 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
         i++;
         j = 0;
     }
-
-    return (0);
+    return (NULL);
 }
-
+/*
 int main()
 {
-    const char *haystack = NULL;
-    const char *needle = ;
+    const char *haystack = "Diz Ola";
+    const char *needle = "Ola";
     char *result = ft_strnstr(haystack, needle, ft_strlen(haystack)); // O terceiro argumento é o tamanho de haystack
 
     if (result != NULL)
@@ -54,4 +53,4 @@ int main()
         printf("Substring não encontrada.\n");
 
     return 0;
-}
+}*/

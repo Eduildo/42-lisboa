@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:18:39 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/13 17:20:20 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/15 22:25:50 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <unistd.h>
 // end libc
 
-int is_alpha(int c);
+int ft_isalpha(int c);
 int ft_isdigit(int c);
 int ft_isalnum(int c);
 int ft_isascii(int c);
@@ -51,5 +51,6 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *));
 void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *str, int fd);
+void ft_putnbr_fd(int n, int fd);
 
 #endif

@@ -6,31 +6,34 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:09:34 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/30 18:38:45 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/14 13:57:57 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include "ft_strlen.c"
+// #include <stdio.h>
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t dst_size)
+size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
     size_t src_len;
     size_t dst_len;
+    size_t i;
 
+    i = 0;
     src_len = ft_strlen(src);
     dst_len = ft_strlen(dst);
-
-    if (dst_len >= dst_size)
-        dst_len = dst_size;
-
-    if (dst_len == dst_size)
-        ft_memcpy(dst + dst_len, src, src_len + 1);
-    else
+    if (size <= 0)
+        return (src_len);
+    if (dst_len >= size)
+        return (size + src_len);
+    while (src[i] && i + dst_len < size - 1)
     {
-        ft_memcpy(dst + dst_len, src, dst_size - dst_len - 1);
-        dst[dst_size - 1] = '\0';
+        dst[dst_len + i] = src[i];
+        i++;
     }
-    return (dst_len + src_len);
+    dst[dst_len + i] = '\0';
+    return (src_len + dst_len);
 }
 
 /*int main()
@@ -38,12 +41,12 @@ size_t ft_strlcat(char *dst, const char *src, size_t dst_size)
 
     const char *src = "Hello, world!";
 
-    char dest[1];
-
-    size_t copied_len = ft_strlcat(dest, src, sizeof(dest));
+    char dest[] = "OK";
+    int size = ft_strlen(src) + ft_strlen(dest);
+    size_t copied_len = ft_strlcat(dest, src, -1);
 
     printf("String concatenada: %s\n", dest);
-    printf("Comprimento da string concatenada: %zu\n", copied_len);
+    printf("Comprimento da string concatenada: %zu\n dest se tornou: %s\n", copied_len, dest);
 
     return (0);
 }*/

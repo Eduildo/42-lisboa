@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:15:01 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/13 16:33:50 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/20 14:27:53 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     if (!s)
         return (NULL);
 
-    if (len > ft_strlen(s))
+    if (start >= ft_strlen(s))
         return (ft_strdup(""));
     if (len > ft_strlen(s + start))
         len = ft_strlen(s + start);

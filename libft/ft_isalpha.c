@@ -6,17 +6,17 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:33:44 by eduildo           #+#    #+#             */
-/*   Updated: 2024/04/30 18:27:54 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/14 11:22:22 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int is_alpha(int c)
+int ft_isalpha(int c)
 {
     if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-        return c;
-    return 0;
+        return (c);
+    return (0);
 }
 
 /*int main()

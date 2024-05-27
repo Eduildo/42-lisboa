@@ -6,7 +6,7 @@
 /*   By: eduildo <eduildo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 16:50:59 by eduildo           #+#    #+#             */
-/*   Updated: 2024/05/13 16:31:14 by eduildo          ###   ########.fr       */
+/*   Updated: 2024/05/25 23:53:11 by eduildo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,22 @@ static void split_string(char const *s, char c, char **res)
 char **ft_split(char const *s, char c)
 {
     char **res;
+    if (c == '\0' || s[0] == '\0')
+    {
+        char **res = ft_calloc(2, sizeof(char *));
+        if (!res)
+            return NULL;
+        res[0] = ft_strdup(s);
+        if (!res[0])
+        {
+            free(res);
+            return NULL;
+        }
+        return res;
+    }
 
+    if (!s)
+        return (NULL);
     res = ft_calloc((char_counter(s, c) + 1), sizeof(char *));
     if (!res)
         return NULL;
