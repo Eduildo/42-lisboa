@@ -1,7 +1,7 @@
 #include "get_next_line.h"
-#include <fcntl.h>  // Para a função open
-#include <stdio.h>  // Para printf e perror
-#include <unistd.h> // Para close
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
 
 int main(void)
 {
@@ -14,7 +14,7 @@ int main(void)
         perror("open");
         return 1;
     }
-    printf("Leitura completa.\n");
+    printf("valor da função: %s", get_next_line(fd));
     while ((line = get_next_line(fd)) != NULL)
     {
         printf("Linha lida: %s", line);

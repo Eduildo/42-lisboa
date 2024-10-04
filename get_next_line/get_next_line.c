@@ -44,7 +44,7 @@ char *update_remainder(char *remainder)
 }
 char *get_next_line(int fd)
 {
-    static char *remainder = NULL;
+    static char *remainder;
     char *buffer;
     char *line;
     ssize_t bytes_read;
@@ -57,11 +57,13 @@ char *get_next_line(int fd)
     bytes_read = read(fd, buffer, BUFFER_SIZE);
     if (bytes_read < 0)
     {
+        // printf("remainder after ft_strjoin: %s\n", remainder);
         free(buffer);
         return (NULL);
     }
     buffer[bytes_read] = '\0';
     remainder = ft_strjoin(remainder, buffer);
+    // printf("remainder after ft_strjoin: %s\n", remainder);
     free(buffer);
     if (!remainder)
         return (NULL);

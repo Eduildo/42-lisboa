@@ -4,7 +4,7 @@ size_t ft_strlen(const char *str)
 {
     size_t i;
     i = 0;
-    while (str[i])
+    while (str && str[i])
         i++;
     return (i);
 }
@@ -17,15 +17,20 @@ char *ft_strjoin(char const *s1, char const *s2)
 
     i = 0;
     j = 0;
+
+    // printf("remainder after ft_strjoin: %s\n", s1);
+    // printf("remainder after ft_strjoin: %s\n", s2);
     resp = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
     if (!resp)
         return (NULL);
-    while (s1[i])
+
+    while (s1 && s1[i])
         resp[j++] = s1[i++];
     i = 0;
-    while (s2[i])
+    while (s2 && s2[i])
         resp[j++] = s2[i++];
     resp[j] = '\0';
+    // printf("Valor de resp retornado %s\n", resp);
     return (resp);
 }
 
@@ -41,7 +46,7 @@ char *ft_strdup(const char *s1)
     i = 0;
     if (!dest)
         return (NULL);
-    while (s1[i])
+    while (s1 && s1[i])
     {
         dest[i] = s1[i];
         i++;
