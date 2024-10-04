@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/uio.h>
+#include <stdio.h>
 #include <unistd.h>
 
 char *next_line(char *buffer);

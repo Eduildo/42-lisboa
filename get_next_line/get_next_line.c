@@ -44,7 +44,7 @@ char *update_remainder(char *remainder)
 }
 char *get_next_line(int fd)
 {
-    static char *remainder;
+    static char *remainder = NULL;
     char *buffer;
     char *line;
     ssize_t bytes_read;
