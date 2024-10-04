@@ -10,14 +10,17 @@ char *next_line(char *buffer)
         return (NULL);
     while (buffer[len] && buffer[len] != '\n')
         len++;
-    line = (char *)malloc(sizeof(char) * (len + 1 + (buffer[len] == '\n' ? 1 : 0)));
+    if (buffer[len] == '\n')
+        line = (char *)malloc(sizeof(char) * (len + 2));
+    else
+        line = (char *)malloc(sizeof(char) * (len + 1));
     if (!line)
         return (NULL);
     ft_strncpy(line, buffer, len);
     if (buffer[len] == '\n')
     {
         line[len] = '\n';
-        line++;
+        len++;
     }
     line[len] = '\0';
     return (line);
@@ -28,12 +31,14 @@ char *update_remainder(char *remainder)
     char *new_line_pos;
 
     new_line_pos = ft_strchr(remainder, '\n');
+    printf("Lembranças: %s\n", new_line_pos);
     if (!new_line_pos)
     {
         free(remainder);
         return (NULL);
     }
     new_remainder = ft_strdup(new_line_pos + 1);
+    // printf("Lembranças: %s\n", new_remainder);
     if (!new_remainder)
     {
         free(remainder);
@@ -57,13 +62,11 @@ char *get_next_line(int fd)
     bytes_read = read(fd, buffer, BUFFER_SIZE);
     if (bytes_read < 0)
     {
-        // printf("remainder after ft_strjoin: %s\n", remainder);
         free(buffer);
         return (NULL);
     }
     buffer[bytes_read] = '\0';
     remainder = ft_strjoin(remainder, buffer);
-    // printf("remainder after ft_strjoin: %s\n", remainder);
     free(buffer);
     if (!remainder)
         return (NULL);

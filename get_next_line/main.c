@@ -14,8 +14,9 @@ int main(void)
         perror("open");
         return 1;
     }
+    line = get_next_line(fd);
     printf("valor da função: %s", get_next_line(fd));
-    while ((line = get_next_line(fd)) != NULL)
+    while (line != NULL)
     {
         printf("Linha lida: %s", line);
         free(line);

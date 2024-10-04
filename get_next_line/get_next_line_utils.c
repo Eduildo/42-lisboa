@@ -18,8 +18,6 @@ char *ft_strjoin(char const *s1, char const *s2)
     i = 0;
     j = 0;
 
-    // printf("remainder after ft_strjoin: %s\n", s1);
-    // printf("remainder after ft_strjoin: %s\n", s2);
     resp = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
     if (!resp)
         return (NULL);
@@ -30,7 +28,6 @@ char *ft_strjoin(char const *s1, char const *s2)
     while (s2 && s2[i])
         resp[j++] = s2[i++];
     resp[j] = '\0';
-    // printf("Valor de resp retornado %s\n", resp);
     return (resp);
 }
 
