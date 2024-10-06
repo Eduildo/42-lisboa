@@ -31,18 +31,19 @@ char *update_remainder(char *remainder)
     char *new_line_pos;
 
     new_line_pos = ft_strchr(remainder, '\n');
-    printf("Lembranças: %s\n", new_line_pos);
+
     if (!new_line_pos)
     {
         free(remainder);
         return (NULL);
     }
+    // printf("Lembranças: %s\n", new_line_pos);
     new_remainder = ft_strdup(new_line_pos + 1);
-    // printf("Lembranças: %s\n", new_remainder);
+    // printf("New Remainder: %s\n", new_remainder);
     if (!new_remainder)
     {
-        free(remainder);
-        return (NULL);
+        // free(remainder);
+        return (remainder);
     }
     free(remainder);
     return (new_remainder);

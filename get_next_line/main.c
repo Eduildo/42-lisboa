@@ -6,20 +6,19 @@
 int main(void)
 {
     int fd;
+    int i;
     char *line;
 
     fd = open("test_file.txt", O_RDONLY);
-    if (fd < 0)
+    i = 1;
+
+    // printf("valor da função: %s\n", get_next_line(fd));
+    while (i < 10)
     {
-        perror("open");
-        return 1;
-    }
-    line = get_next_line(fd);
-    printf("valor da função: %s", get_next_line(fd));
-    while (line != NULL)
-    {
+        line = get_next_line(fd);
         printf("Linha lida: %s", line);
         free(line);
+        i++;
     }
     close(fd);
 

@@ -54,18 +54,21 @@ char *ft_strdup(const char *s1)
 char *ft_strchr(const char *s, int c)
 {
     unsigned int i;
+    char *res;
     char cc;
+
     cc = (char)c;
+    res = NULL;
     i = 0;
     while (s[i])
     {
         if (s[i] == cc)
-            return ((char *)&s[i]);
+            res = (char *)&s[i];
         i++;
     }
-    if (c == 0)
-        return ((char *)s + i);
-    return (0);
+    if (s[i] == cc)
+        res = (char *)&s[i];
+    return (res);
 }
 
 char *ft_strncpy(char *dest, char *src, unsigned int n)
