@@ -11,8 +11,6 @@ int main(void)
 
     fd = open("test_file.txt", O_RDONLY);
     i = 1;
-
-    // printf("valor da função: %s\n", get_next_line(fd));
     while (i < 5)
     {
         line = get_next_line(fd);
