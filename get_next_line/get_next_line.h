@@ -1,6 +1,6 @@
 #ifndef GET_NEXT_LINE_H
 #define GET_NEXT_LINE_H
-#define BUFFER_SIZE 32
+#define BUFFER_SIZE 1000
 
 #include <stdlib.h>
 #include <sys/types.h>

@@ -13,7 +13,7 @@ int main(void)
     i = 1;
 
     // printf("valor da função: %s\n", get_next_line(fd));
-    while (i < 10)
+    while (i < 5)
     {
         line = get_next_line(fd);
         printf("Linha lida: %s", line);
