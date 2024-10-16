@@ -13,8 +13,8 @@ int main(void)
     i = 1;
     while (i < 5)
     {
-        line = get_next_line(fd);
-        printf("Linha lida: %s", line);
+        get_next_line(fd);
+        printf(" %s", line);
         free(line);
         i++;
     }

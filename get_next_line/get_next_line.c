@@ -31,17 +31,26 @@ char *update_remainder(char *remainder)
     char *new_line_pos;
 
     new_line_pos = ft_strchr(remainder, '\n');
+    printf("Resultado de ft_strchr: %s\n", new_line_pos ? new_line_pos : "NULL");
 
     if (!new_line_pos)
     {
+        printf("Sem nova linha encontrada em remainder.\n");
         free(remainder);
         return (NULL);
     }
-    // printf("Lembranças: %s\n", new_line_pos);
+    if (*(new_line_pos + 1) == '\0')
+    {
+        printf("Nenhum conteúdo após o '\\n'.\n"); // Depuração
+        free(remainder);
+        return (NULL);
+    }
     new_remainder = ft_strdup(new_line_pos + 1);
-    // printf("New Remainder: %s\n", new_remainder);
+    printf("New Remainder depois de ft_strdup: '%s'\n", new_remainder ? new_remainder : "NULL");
+
     if (!new_remainder)
     {
+        printf("New Remainder está vazio.\n");
         // free(remainder);
         return (remainder);
     }
@@ -50,9 +59,9 @@ char *update_remainder(char *remainder)
 }
 char *get_next_line(int fd)
 {
-    static char *remainder;
+    static char *remainder = NULL;
     char *buffer;
-    char *line;
+    char *line = NULL;
     ssize_t bytes_read;
 
     if (fd < 0 || BUFFER_SIZE <= 0)
@@ -60,18 +69,44 @@ char *get_next_line(int fd)
     buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
     if (!buffer)
         return (NULL);
-    bytes_read = read(fd, buffer, BUFFER_SIZE);
-    if (bytes_read < 0)
+
+    while (remainder == NULL || !ft_strchr(remainder, '\n'))
     {
-        free(buffer);
-        return (NULL);
+        bytes_read = read(fd, buffer, BUFFER_SIZE);
+        printf("Bytes lidos: %zd\n", bytes_read);
+        if (bytes_read < 0)
+        {
+            free(buffer);
+            free(remainder);
+            return (NULL);
+        }
+        if (bytes_read == 0)
+            break;
+        buffer[bytes_read] = '\0';
+        char *temp = ft_strjoin(remainder, buffer);
+        if (!temp)
+        {
+            free(buffer);
+            free(remainder);
+            return (NULL);
+        }
+        free(remainder);
+        remainder = temp;
+        printf("Remainder após ft_strjoin: '%s'\n", remainder ? remainder : "NULL");
     }
-    buffer[bytes_read] = '\0';
-    remainder = ft_strjoin(remainder, buffer);
+
     free(buffer);
-    if (!remainder)
+    if (!remainder || !*remainder)
         return (NULL);
     line = next_line(remainder);
+    if (!line)
+    {
+        free(remainder);
+        remainder = NULL;
+        return (NULL);
+    }
+    printf("Linha extraída: %s\n", line ? line : "NULL");
     remainder = update_remainder(remainder);
+    printf("Remainder após update: '%s'\n", remainder ? remainder : "NULL");
     return (line);
 }
