@@ -31,27 +31,27 @@ char *update_remainder(char *remainder)
     char *new_line_pos;
 
     new_line_pos = ft_strchr(remainder, '\n');
-    printf("Resultado de ft_strchr: %s\n", new_line_pos ? new_line_pos : "NULL");
+    // printf("Resultado de ft_strchr: %s\n", new_line_pos ? new_line_pos : "NULL");
 
     if (!new_line_pos)
     {
-        printf("Sem nova linha encontrada em remainder.\n");
+        // printf("Sem nova linha encontrada em remainder.\n");
         free(remainder);
         return (NULL);
     }
     if (*(new_line_pos + 1) == '\0')
     {
-        printf("Nenhum conteúdo após o '\\n'.\n"); // Depuração
+        // printf("Nenhum conteúdo após o '\\n'.\n"); // Depuração
         free(remainder);
         return (NULL);
     }
     new_remainder = ft_strdup(new_line_pos + 1);
-    printf("New Remainder depois de ft_strdup: '%s'\n", new_remainder ? new_remainder : "NULL");
+    // printf("New Remainder depois de ft_strdup: '%s'\n", new_remainder ? new_remainder : "NULL");
 
     if (!new_remainder)
     {
-        printf("New Remainder está vazio.\n");
-        // free(remainder);
+        // printf("New Remainder está vazio.\n");
+        //  free(remainder);
         return (remainder);
     }
     free(remainder);
@@ -73,7 +73,7 @@ char *get_next_line(int fd)
     while (remainder == NULL || !ft_strchr(remainder, '\n'))
     {
         bytes_read = read(fd, buffer, BUFFER_SIZE);
-        printf("Bytes lidos: %zd\n", bytes_read);
+        // printf("Bytes lidos: %zd\n", bytes_read);
         if (bytes_read < 0)
         {
             free(buffer);
@@ -92,7 +92,7 @@ char *get_next_line(int fd)
         }
         free(remainder);
         remainder = temp;
-        printf("Remainder após ft_strjoin: '%s'\n", remainder ? remainder : "NULL");
+        // printf("Remainder após ft_strjoin: '%s'\n", remainder ? remainder : "NULL");
     }
 
     free(buffer);
@@ -105,8 +105,6 @@ char *get_next_line(int fd)
         remainder = NULL;
         return (NULL);
     }
-    printf("Linha extraída: %s\n", line ? line : "NULL");
     remainder = update_remainder(remainder);
-    printf("Remainder após update: '%s'\n", remainder ? remainder : "NULL");
     return (line);
 }
