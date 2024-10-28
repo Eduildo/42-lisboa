@@ -67,7 +67,6 @@ char *get_next_line(int fd)
     while (remainders[fd] == NULL || !ft_strchr(remainders[fd], '\n'))
     {
         bytes_read = read(fd, buffer, BUFFER_SIZE);
-        // printf("Bytes lidos: %zd\n", bytes_read);
         if (bytes_read < 0)
         {
             free(buffer);

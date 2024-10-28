@@ -38,6 +38,23 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (resp);
 }
 
+// char *ft_strjoin(char *s1, char *s2)
+// {
+//     char *str;
+//     int i;
+
+//     i = 0;
+//     str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+//     if (!str)
+//         return (NULL);
+//     while (s1 != NULL && *s1)
+//         str[i++] = *s1++;
+//     while (*s2)
+//         str[i++] = *s2++;
+//     free(s1 - ft_strlen(s1));
+//     return (str);
+// }
+
 char *ft_strdup(const char *s1)
 {
     char *dest;
@@ -60,22 +77,15 @@ char *ft_strdup(const char *s1)
 }
 char *ft_strchr(const char *s, int c)
 {
-    unsigned int i;
     char *res;
-    char cc;
 
-    cc = (char)c;
-    res = NULL;
-    i = 0;
-    while (s[i])
-    {
-        if (s[i] == cc)
-            res = (char *)&s[i];
-        i++;
-    }
-    if (s[i] == cc)
-        res = (char *)&s[i];
-    return (res);
+    res = (char *)s;
+    while (*res != c && *res != 0)
+        res++;
+    if (*res == c)
+        return (res);
+    else
+        return (NULL);
 }
 
 char *ft_strncpy(char *dest, char *src, unsigned int n)
